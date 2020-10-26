@@ -67,6 +67,14 @@
         </geometry>
       </visual>
    </link>
+   <link name="${ns}_tcp">
+   </link>
+    <joint name="${ns}_tcp_joint" type="fixed">
+      <parent link="${ns}_hand"/>
+      <child link="${ns}_tcp"/>
+      <origin xyz="0 0 0.12" rpy="0 0 0"/>
+      <axis xyz="0 -1 0"/>
+    </joint>
     <joint name="${ns}_finger_joint1" type="prismatic">
       <parent link="${ns}_hand"/>
       <child link="${ns}_leftfinger"/>
